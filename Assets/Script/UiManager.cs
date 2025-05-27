@@ -77,11 +77,14 @@ public class UiManager : MonoBehaviour
     }
     public void UpdateTime()
     {
+        // 현재 시간에서 지난 프레임의 시간을 빼서 카운트다운을 구현
         CurrentTime -= Time.deltaTime;
-        TextTimer.text = "Time: " + Mathf.CeilToInt(CurrentTime).ToString();
+        //사용자에게 시간 정보를 제공하기 위해 텍스트 UI에 현재 시간을 소수점 없이 올림한 정수 형태로 표시
+        TextTimer.text = "Time: " + Mathf.CeilToInt(CurrentTime).ToString();    
 
         if (CurrentTime <= 0)
         {
+            // 시간이 다 되면 게임 오버
             GameOver();
         }
     }

@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &341982166
+--- !u!1 &148434264
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,38 +127,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 341982168}
-  - component: {fileID: 341982167}
+  - component: {fileID: 148434266}
+  - component: {fileID: 148434265}
   m_Layer: 0
-  m_Name: TextTotalScore
+  m_Name: EndUiManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &341982167
+--- !u!114 &148434265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341982166}
+  m_GameObject: {fileID: 148434264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa1f8e829a34bc641af4486fcc83c2d4, type: 3}
+  m_Script: {fileID: 11500000, guid: f3968580de5e6b547a3c5ee8886d5429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextTotalScore: {fileID: 0}
---- !u!4 &341982168
+  TextTotalScore: {fileID: 955457498}
+--- !u!4 &148434266
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341982166}
+  m_GameObject: {fileID: 148434264}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.50326, y: 76.17272, z: 178.58984}
+  m_LocalPosition: {x: 2459.0803, y: 1056.1006, z: -223.49706}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -439,7 +439,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 703024931}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 148434265}
+        m_TargetAssemblyTypeName: EndUiManager, Assembly-CSharp
+        m_MethodName: ResetGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &703024931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,7 +662,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -150}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 1000, y: 500}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &955457498
 MonoBehaviour:
@@ -842,7 +854,7 @@ GameObject:
   - component: {fileID: 1095056543}
   - component: {fileID: 1095056542}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: RetryText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1215,4 +1227,4 @@ SceneRoots:
   - {fileID: 406106357}
   - {fileID: 1493564288}
   - {fileID: 973434903}
-  - {fileID: 341982168}
+  - {fileID: 148434266}

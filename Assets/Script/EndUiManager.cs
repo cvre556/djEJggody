@@ -1,16 +1,25 @@
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class EndUiManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public TMP_Text TextTotalScore = null;
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        TextTotalScore.text = "Total Score : " + UiManager.Instance.Score.ToString();
+    }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene("MenuScene");
     }
 }
