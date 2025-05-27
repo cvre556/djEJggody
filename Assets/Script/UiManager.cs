@@ -37,7 +37,11 @@ public class UiManager : MonoBehaviour
         TextScore.text = "Score : " + Score.ToString();
         TextCount.text = "Count : " + Count.ToString();
 
-        UpdateTime();
+        // 타이틀 씬일 경우 타이머가 작동
+        if (SceneManager.GetActiveScene().name == "GameScene")
+        {
+            UpdateTime();
+        }
     }
 
     private void Awake()
@@ -75,6 +79,8 @@ public class UiManager : MonoBehaviour
         Debug.Log("게임 종료!");
         SceneManager.LoadScene("EndScene");
     }
+
+    // 시간이 지남에 따라 타이머가 줄어들고 타이머가 0이 되면 게임오버 함수호출
     public void UpdateTime()
     {
         // 현재 시간에서 지난 프레임의 시간을 빼서 카운트다운을 구현
