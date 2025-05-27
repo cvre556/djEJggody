@@ -57,6 +57,8 @@ public class BamsongiController : MonoBehaviour
             CameraController zoomController = FindFirstObjectByType<CameraController>();
             if (zoomController != null)
             {
+                // 밤송이를 장애물에 붙이기
+                transform.SetParent(collision.transform);
                 // 카메라 줌 효과 시작
                 zoomController.StartZoomEffect();
             }
